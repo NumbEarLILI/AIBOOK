@@ -11,6 +11,7 @@ Welcome to AIBook's documentation!
    :caption: Contents:
 
    AIHistory
+   HowToStudy
 
 Indices and tables
 ==================
