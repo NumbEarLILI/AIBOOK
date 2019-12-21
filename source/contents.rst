@@ -12,6 +12,7 @@ Contents:
 
    AIHistory
    HowToStudy
+   Python入门
 
 Indices and tables
 ==================
