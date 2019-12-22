@@ -32,42 +32,6 @@ class ImageArranger:
         self.__bot.place(x=160, y=90)
         self.__canvas.place(x=20, y=130)
 
-    def __arranger(self, file_path):
-        file_names = self.__get_file_names(file_path)
-        print('%s photos to arrange' % len(file_names))
-        for pic in file_names:
-            try:
-                exif = self.__get_exif_data(pic)
-                if exif == {}:
-                    continue
-                if 'Model' not in exif.keys():
-                    continue
-                camera = exif['Model']
-                if 'LensModel' in exif.keys():
-                    lens = exif['LensModel']
-                else:
-                    lens = 'unknown'
-                if 'DateTimeOriginal' not in exif.keys():
-                    continue
-                time = exif['DateTimeOriginal']
-                date = time[:10]
-                year, month, day = date.split(':')
-                new_path_root = 'Z:/Photos/%s年/%s月/%s-%s' % (year, month, month, day)
-                if not os.path.exists('Z:/Photos/%s年/' % year):
-                    os.mkdir('Z:/Photos/%s年/' % year)
-                if not os.path.exists('Z:/Photos/%s年/%s月' % (year, month)):
-                    os.mkdir('Z:/Photos/%s年/%s月' % (year, month))
-                if not os.path.exists(new_path_root):
-                    os.mkdir(new_path_root)
-
-                old_name = os.path.split(pic)[1]
-                new_name = (camera + '-' + lens + '-' + time + '-' + old_name).replace(' ', '-').replace(':', '-').replace('/', '')
-                new_path = os.path.join(new_path_root, new_name)
-                if not os.path.exists(new_path):
-                    shutil.copyfile(pic, new_path)
-            except ValueError or IOError:
-                continue
-
     @staticmethod
     def __get_exif_data(fname):
         """Get embedded EXIF data from image file."""
@@ -160,9 +124,9 @@ if __name__ == '__main__':
 
 然后你会看到窗口弹出
 
-![1576945401962](images\1576945401962.png)
+![1576945401962](images/1576945401962.png)
 
 输入需要整理的目录和输出目录，点击DO就可以整理照片了。照片会按照年份/月份目录进行分类，然后重命名。
 
-![1576945593126](images\1576945593126.png)
+![1576945593126](images/1576945593126.png)
 
