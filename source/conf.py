@@ -25,7 +25,7 @@ github_doc_root = ''
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {
-    "style_nav_header_background": "#0f172a",
+    "style_nav_header_background": "#eff6ff",
     "navigation_depth": 3,
     "collapse_navigation": False,
     "sticky_navigation": True,

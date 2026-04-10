@@ -91,6 +91,30 @@ body {
   max-width: 72ch;
 }
 
+.rst-content .section > h2,
+.rst-content .section > h3,
+.rst-content .section > h4 {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rst-content .section > ul,
+.rst-content .section > ol {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rst-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
 .rst-content a {
   color: var(--brand);
 }
