@@ -16,7 +16,14 @@ body {
 
 .wy-nav-top,
 .wy-side-nav-search {
-  background: linear-gradient(135deg, #0f172a, #1e293b) !important;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe) !important;
+  color: #0f172a !important;
+}
+
+.wy-side-nav-search > a,
+.wy-nav-top a,
+.wy-nav-top i {
+  color: #0f172a !important;
 }
 
 .wy-side-nav-search input[type="text"] {
@@ -60,6 +67,23 @@ body {
 
 .rst-content {
   font-size: 16px;
+}
+
+.rst-content .document,
+.rst-content .wy-breadcrumbs,
+.rst-content > div[role="navigation"] > hr {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rst-content .document {
+  padding-bottom: 0.4rem;
+}
+
+.rst-content .wy-breadcrumbs {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .rst-content .section > p,
@@ -201,6 +225,11 @@ body {
   border-right: 3px solid var(--brand);
 }
 
+.wy-menu-vertical a {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 @media (min-width: 1280px) {
   .wy-nav-content {
     max-width: 980px;
@@ -237,6 +266,12 @@ body {
 
   .modern-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rst-content .document,
+  .rst-content .wy-breadcrumbs,
+  .rst-content > div[role="navigation"] > hr {
+    max-width: 100%;
   }
 }
 
