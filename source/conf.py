@@ -14,7 +14,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 # import recommonmark
-from recommonmark.transform import AutoStructify
+# from recommonmark.transform import AutoStructify
 import sphinx_rtd_theme
 # from recommonmark.parser import CommonMarkParser
 source_parsers = {
