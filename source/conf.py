@@ -23,6 +23,12 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_options = {
+    "style_nav_header_background": "#0f172a",
+    "navigation_depth": 3,
+    "collapse_navigation": False,
+    "sticky_navigation": True,
+}
 # -- Project information -----------------------------------------------------
 
 project = 'AIBook'
@@ -68,6 +74,7 @@ exclude_patterns = []
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = ['modern.css']
 
 def setup(app):
     app.add_config_value('recommonmark_config', {
